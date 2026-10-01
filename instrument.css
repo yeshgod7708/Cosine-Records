@@ -1,0 +1,87 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(255, 255, 255, 0.1);
+
+    --cyan: #00d2ff;
+    --indigo: #6366f1;
+    --purple: #c084fc;
+
+    --accent-gradient: linear-gradient(
+        135deg,
+        #00d2ff 0%,
+        #6366f1 50%,
+        #c084fc 100%
+    );
+
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+}
+
+/* Smooth transition for hover effects */
+body {
+background: var(--bg-gradient);
+color: var(--text-primary);
+font-family: 'Plus Jakarta Sans', sans-serif;
+min-height: 100vh;
+}
+.transition {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Elevates the card and deepens the shadow on hover */
+.hover-shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Style for the synthesizer sub-list */
+.list-unstyled li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+/* Adds a sleek, matching color dot next to the list items */
+.list-unstyled li::before {
+  content: "•";
+  color: var(--bs-primary); /* Uses Bootstrap's primary theme color */
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
+  margin-left: -1rem;
+}
+.navbar {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(
+            90deg,
+            #0f172a 0%,
+            #1e1b4b 50%,
+            #312e81 100%
+            ) !important;
+        }
+        .navbar-brand {
+            font-weight: 800;
+            letter-spacing: 1px;
+            background: linear-gradient(45deg, #1db954, #00d2ff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .navbar .nav-link {
+color: white !important;
+}
+ 
+.navbar .nav-link:hover {
+color: #f8fafc !important;
+opacity: 0.85;
+}
+ 
+.navbar .nav-link.active {
+color: white !important;
+font-weight: 700;
+}
+ 
+.navbar .navbar-brand {
+color: white !important;
+font-weight: 800;
+}
