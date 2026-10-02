@@ -55,21 +55,49 @@
     <div class="col-lg-6">
       <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5 h-100 bg-white">
         <h3 class="fw-bold mb-4 text-info">Send a Message</h3>
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label text-secondary fw-medium">Your Name</label>
-            <input type="text" class="form-control form-control-lg bg-light border-0 fs-6" id="name" placeholder="John Doe" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label text-secondary fw-medium">Email Address</label>
-            <input type="email" class="form-control form-control-lg bg-light border-0 fs-6" id="email" placeholder="name@example.com" required>
-          </div>
-          <div class="mb-4">
-            <label for="message" class="form-label text-secondary fw-medium">Your Message</label>
-            <textarea class="form-control form-control-lg bg-light border-0 fs-6" id="message" rows="4" placeholder="How can we help you?" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-lg w-100 py-3 fw-semibold shadow-sm">Send Message</button>
-        </form>
+        <section id="contact">
+          <h2>Contact Me</h2>
+
+          <div data-fs-success class="success-message"></div>
+          <div data-fs-error class="error-message"></div>
+
+          <form id="contact-form">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              data-fs-field
+              required
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              data-fs-field
+              required
+            />
+
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              data-fs-field
+            />
+
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="6"
+              data-fs-field
+              required
+            ></textarea>
+
+            <button type="submit" data-fs-submit-btn>
+              Send Message
+            </button>
+          </form>
+        </section>
       </div>
     </div>
 
@@ -89,5 +117,6 @@
 </div>
 <script src="contact.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
