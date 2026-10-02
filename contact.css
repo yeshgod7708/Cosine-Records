@@ -107,3 +107,32 @@ font-weight: 700;
 color: white !important;
 font-weight: 800;
 }
+.success-message {
+  color: #28a745;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.error-message {
+  color: #dc3545;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#contact-form button {
+  padding: 12px 20px;
+  cursor: pointer;
+}
